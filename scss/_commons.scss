@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Old+Standard+TT:ital,wght@0,700;1,400&family=Poppins:wght@600&display=swap');
+
+/* vars */
+
+$darkTransparentBg: #060606f7;
+$whiteText: rgb(238, 235, 235);
+$whiteBlueBg: #d4d4de;
+$primary: #287c81fa;
+$lighterPrimary: #98c4c7;
+$blackText:#262729;
+$titlesFont: 'Old Standard TT',serif;
+$sansSerifFont: 'Lato', sans-serif;
+
+// media queries
+$galaxys8: 360px;
+$iphone12: 390px;
+$ipadMini: 712px;
+$bootstrap-md: 768px;
+$ipadAir: 820px;
+$bootstrap-lg: 992px;
+$ipadMiniLandscape: 1024px;
+$bootstrap-xl: 1200px;
+
+
+:root {
+    scroll-behavior: smooth;
+    --navHeight: 8vh;
+}
+
+/* reset */
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+}
+
+body {
+    font-family: $sansSerifFont;
+}
+
+section {
+    h2, h3 {
+        color: $blackText;
+    }
+    h1 {
+        color: $blackText; 
+        text-align: center;
+        font-family: $titlesFont;
+        font-style: italic;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin-bottom: 0;
+        font-size: calc(0.8rem + 3.9vw);
+        
+    }
+}
+
+.section-spacing {
+    gap: calc(1rem + 1vw);
+    padding: calc(1.7rem + 2.5vw) 0;
+}
+
+/* FOOTER */
+footer {
+    color: #7a7a7a;
+    font-size: calc(0.5rem + 1vw);
+}
+
+.divider_1 {
+    border-bottom: 2px solid $primary;
+    margin-top: -0.8em;
+    width: calc(2.1rem + 5vw);
+    margin-bottom: 0.5rem;
+}
+
+/* pages */
+.header-titles {
+    font-family: $titlesFont;
+    font-weight: 100;
+    color: white;
+    font-size: calc(1.7rem + 2vw);
+    width: min-content;
+    margin: 0;
+}
+
+.about-bg-img {
+    background-image: url(../img/cards-background.webp);
+    background-size: 205%;
+    background-color: #fffffff0;
+    background-blend-mode: lighten;
+}
+
+/* banner */
+.pages-background {
+    grid-area: banner;
+    background-image: url(../img/fondo-prueba1.png);
+    background-size: cover;
+    background-position: 76% 100%;
+    background-position: calc(73% - 12vw) 100%;
+    filter: drop-shadow(1px 3px 1px black);
+}
+
+.about-banner {
+    // background: linear-gradient(90deg, #000000 23%, #000000d1 44%, #13002047 100%);
+    background: linear-gradient(90deg, #000000 23%, #000000d1 44%, #13002047 100%), linear-gradient(90deg, #000000 0%, #000000d1 2%, #13002047 100%);
+    
+}
+
+@media screen and (min-width: $ipadMiniLandscape) {
+    section {
+        h1 {
+            font-size: calc(1rem + 2.5vw);
+        }
+    } 
+    
+}
+
+@media screen and (min-width: $bootstrap-xl) {
+    .header-titles {
+        padding: unset;
+    }
+
+    .pages-background {
+        background-image: url(../img/fondo-prueba1.png);
+        background-size: cover;
+        background-position: right top;
+        filter: drop-shadow(1px 3px 1px black);
+        .hero-banner {
+            height: 55vh;
+        }
+    }   
+
+}

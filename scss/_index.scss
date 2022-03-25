@@ -1,0 +1,173 @@
+/* WELCOME SECTION */
+
+.welcome-section {
+    grid-area: welcome;
+    background-image: linear-gradient(80deg, $whiteBlueBg 0%, #d9d9e187 100%);
+    
+    p {
+        text-align: justify;
+        line-height: calc(1.8rem + 1.8vw);
+        font-size: calc(1.1rem + 0.75vw);
+    }
+}
+
+
+    /* eye divider */
+.rule {
+    border-bottom: 2px solid $primary;
+}
+
+.fa-eye {
+    color: $primary;
+    font-size: calc(0.9rem + 0.8vw);
+}
+
+    /* next button */
+.next {
+    color: $primary;
+    font-size: calc(0.5rem + 1vw);
+    .fa-angle-down {
+        @extend .next;
+    }
+}
+
+/* BEST-ROUTINES */
+
+.best-routines-section {
+    grid-area: best-routines;
+    overflow: hidden;
+    img {
+        box-shadow: 0px 1px calc(3px + 0.85vw) 0px black;
+    }
+}
+
+/* single payment section */
+
+.single-payment-section {
+    grid-area: single-payment;
+    background-image: url(../img/girl-amazed1.webp);
+    background-size: 135%;
+    background-position: -250%;
+    overflow: hidden;  
+}
+
+.sp-card-bg {
+    background: linear-gradient(294deg, #377476e0 0%, #337172e0 46%, #316466d1 100%);
+}
+
+.offer-band-box {
+    height: calc(30% + 12vw);
+    width: 40%;
+    overflow: hidden;
+    z-index: 888;
+}
+
+.offer-band {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: calc(0.8rem + 3.7vw);
+    width: 130%;
+    background-image: linear-gradient(359deg, black 23%, #b3b3b354 55%, #ff040400), linear-gradient(180deg, black 100%, #6c5d5d9c 100%, #ff000000);
+    transform: rotate(45deg);
+    position: absolute;
+    top: calc(6% + 3.2VW);
+    left: 7%;
+}
+
+.sp-card {
+    background-color: #4d4d4d;
+    h1 {
+        color: $whiteText;
+        font-size: calc(0.5rem + 5vw);
+    }
+    .sp-card-body {
+        background-color: #eeebeb;
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+        font-family: $sansSerifFont;
+        font-weight: 800;
+        color: #555555;
+
+        a {
+            font-family: $sansSerifFont;
+            font-weight: 500;
+            border: none;
+            background-color: #555555da;
+            transition: all 0.3s;
+            font-size: calc(0.2rem + 2vw);
+            &:hover {
+                background-color: black;
+            }
+        }
+        .price {
+            font-size: calc(0.8rem + 6.3vw);
+            small {
+                font-size: calc(0.7rem + 5.3vw);
+            }
+        }
+        p, .fa-check-circle {
+            font-size: calc(0.5rem + 2.3vw);
+            margin-bottom: 0;
+        }
+    }
+}    
+
+@media screen and (min-width:$iphone12) {
+
+    .offer-band {
+        left: calc(5% + 3.5vw);
+    }
+
+}
+
+@media screen and (min-width: $bootstrap-lg) {
+
+    .sp-card {
+            h1 {
+            font-size: calc(0.5rem + 4vw);
+        }
+    }
+    
+    .offer-band {
+        font-size: calc(0.8rem + 3.1vw);
+        left: calc(7% + 3.5vw);
+    }
+    
+}
+
+@media screen and (min-width: $bootstrap-xl) {
+
+    .eye-divider {
+        display: flex;
+        gap: 2em;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .rule {
+        border-bottom: 2px solid $primary;
+
+    }
+
+    .best-routines-section {
+            h1 {
+            line-height: 1.3;
+        }
+    } 
+    
+    .price {
+        font-size: calc(0.45rem + 5.5vw);
+        small {
+            font-size: calc(0.35rem + 4.5vw);
+        }
+    }
+
+    
+
+}
+
+
+
+
