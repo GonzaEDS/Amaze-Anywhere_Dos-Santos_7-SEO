@@ -1,17 +1,16 @@
 {
   "name": "amaze-anywhere_dos-santos-master",
-  "version": "1.0.0",
+  "version": "6.0.0",
   "description": "A landing page for a card magic course.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
-		"watch-css": "nodemon -e scss -x \"npm     run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm     run build-css\""
   },
-  
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GonzaEDS/Amaze-Anywhere_Dos-Santos_6-Sass.git"
+    "url": "git+https://github.com/GonzaEDS/Amaze-Anywhere_Dos-Santos_7-SEO.git"
   },
   "keywords": [
     "sass",
@@ -24,11 +23,14 @@
   "author": "Gonzalo Dos Santos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GonzaEDS/Amaze-Anywhere_Dos-Santos_6-Sass/issues"
+    "url": "https://github.com/GonzaEDS/Amaze-Anywhere_Dos-Santos_7-SEO/issues"
   },
-  "homepage": "https://github.com/GonzaEDS/Amaze-Anywhere_Dos-Santos_6-Sass#readme",
+  "homepage": "https://github.com/GonzaEDS/Amaze-Anywhere_Dos-Santos_7-SEO#readme",
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
   }
 }

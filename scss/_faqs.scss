@@ -5,13 +5,11 @@
     border-top: 2em solid #2a023447;
     background: linear-gradient(45deg, #31758f, #23434fc7), linear-gradient(45deg, #256c8747, #2e5f7042);
     .question-divider {
-        display: flex;
-        align-items: center;
+        @include flex(center, center);
         gap: 1em;
     }
     .fa-question-circle {
         color: #cadeef;
-        font-size: calc(0.8rem + 1.5vw);
     }
     .rule {
         border-bottom: 2px solid #8eafcb;
@@ -20,14 +18,12 @@
     .fa-chevron-up {
         color: white;
         font-weight: 100;
-        font-size: calc(0.4rem + 2.2vw);
-        font-size: calc(0.55rem + 1.4vw);
         vertical-align: baseline;
     }
     h2 {
         font-family: $sansSerifFont;
         color: white;
-        font-size: calc(0.759rem + 1.5vw);
+        font-size: map-get($map: $font-size_mediumGrowth, $key: '8');
         text-transform: uppercase;
         font-style: italic;
         font-weight: 500;
@@ -39,7 +35,7 @@
         align-self: center;
         text-align: justify;
         width: 90%;
-        font-size: calc(0.5rem + 1.8vw);
+        font-size: map-get($map: $font-size_mediumGrowth, $key: '11');
         margin-top: 1rem;
         margin-bottom: 0;
     }
@@ -47,9 +43,7 @@
 }
 
 .fa-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include flex-column (center, flex-start);
     margin: 0;
     label {
         display: flex;
@@ -106,7 +100,7 @@ input:checked + li {
     color: rgb(150, 182, 209);
 
     h2 {
-        font-size: calc(1.1rem + 2.3vw);
+        font-size: map-get($map: $font-size_mediumGrowth, $key: '3');
         color: #96b6d1;
         font-family: 'Times New Roman', Times, serif;
         text-transform: uppercase;
@@ -114,7 +108,8 @@ input:checked + li {
     }
     
     p {
-        font-size: calc(0.8rem + 1.1vw);
+        font-size: map-get($map: $font-size_slowGrowth, $key: '9');
+
         text-align: justify;
         line-height: 1.5;
     }

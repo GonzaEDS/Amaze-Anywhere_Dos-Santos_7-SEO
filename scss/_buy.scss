@@ -13,15 +13,9 @@
 
 .summary-text {
     h3 {
-        font-size: calc(1rem + 1.3vw);
+        font-size: map-get($map: $font-size_slowGrowth, $key: '3');
         color: #2f2f2f;
     }
-}
-
-legend {
-   h5 {
-        font-size: calc(0.8rem + 0.9vw);
-    } 
 }
     
 
@@ -35,7 +29,7 @@ legend {
     }
     input:not([type="checkbox"]) {
         border: 1px solid lightgray;
-        font-size: calc(0.9rem + 0.5vw);
+        font-size: map-get($map: $font-size_slowGrowth, $key: '7');
         font-family: helvetica;
         height: calc(2.3rem + 0.5vw);
     
@@ -48,7 +42,7 @@ legend {
 }
 
 fieldset label, .col-form-label {
-    font-size: calc(0.9rem + 0.5vw);
+    font-size: map-get($map: $font-size_slowGrowth, $key: '7');
 } 
 
 .form-control:focus {

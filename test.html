@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amaze Anywhere - Fascinating Card Magic</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script data-search-pseudo-elements defer src="https://pro.fontawesome.com/releases/v5.10.1/js/all.js"></script>
+</head>
+<body>
+    <header class="d-flex text-center align-items-center justify-content-center position-fixed justify-content-lg-between px-lg-4 vw-100">
+        <a href="index.html"><img src="img/logo.png" alt="Amaze Anywhere logo" class="logo"></a> 
+        <nav class="collapse navbar-collapse col-12 col-lg-7 col-xl-6 col-xxl-5 d-lg-flex" id="navbarSupportedContent">
+            <ul class="nav__links d-flex flex-column p-0 mb-4 mt-2 mb-lg-0 mt-lg-0 flex-lg-row justify-content-lg-around align-items-lg-center">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About the course</a>
+                </li>
+                <li>
+                    <a href="faqs.html">FAQs</a>
+                </li>
+                <li>
+                    <a href="testimonials.html">Testimonials</a>
+                </li>
+                <li><button><a href="buy.html" class="enroll-btn">Enroll today</a></button></li>
+            </ul>
+        </nav>
+        
+        <button class="navbar-toggler p-0 nav-toggle-label position-absolute d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+        </button>
+    </header>
+    <main class="about-grid about-bg-img">
+        <div class="pages-background">
+            <div class="about-banner d-flex flex-column align-items-center justify-content-around h-100">
+                <h1 class="header-titles text-uppercase fst-italic">TEST PAGE</h1>  
+                <button id="about-start"><a href="#quick-info"><div class="about-start-btn text-uppercase border border-light rounded-pill d-xl-none"> Kwow the course <i aria-hidden="true" class="fas fa-angle-down"></i></div></a></button>
+            </div>
+        </div>
+        <h1 class="font-size-sg-1">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-2">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-3">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-4">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-5">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-6">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-7">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-8">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-9">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-10">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-11">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-12">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-sg-13">Lorem ipsum dolor sit amet.</h1>
+
+        <h1 class="font-size-mg-1">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-2">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-3">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-4">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-5">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-6">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-7">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-8">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-9">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-10">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-11">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-12">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-mg-13">Lorem ipsum dolor sit amet.</h1>
+
+        <h1 class="font-size-fg-1">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-fg-2">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-fg-3">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-fg-4">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-fg-5">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-fg-6">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-fg-7">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="font-size-fg-8">Lorem ipsum dolor sit amet.</h1>
+    
+        
+
+        
+    </main>
+    <!-- Footer -->
+    <footer class="d-flex align-items-center justify-content-center">
+        <p class="m-1">Copyright © 2022 Amaze Anywhere</p>
+    </footer>
+</body>
+<script>
+    /* initialize AOS */
+    AOS.init();
+
+    /* shrinking navbar when scrolling */
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function() {
+    let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.querySelector('header').style.top = "0";
+        } else {
+            document.querySelector('header').style.top = "calc(0em - var(--navHeight))";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+</script>
+</html>

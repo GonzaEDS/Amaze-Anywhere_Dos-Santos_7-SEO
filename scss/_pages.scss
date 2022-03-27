@@ -1,0 +1,92 @@
+section {
+    h2, h3 {
+        color: $blackText;
+    }
+    h1 {
+        color: $blackText; 
+        text-align: center;
+        font-family: $titlesFont;
+        font-style: italic;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin-bottom: 0;
+        font-size: calc(0.8rem + 3.9vw);
+        
+    }
+}
+
+.section-spacing {
+    gap: calc(1rem + 1vw);
+    padding: calc(1.7rem + 2.5vw) 0;
+}
+
+/* FOOTER */
+footer {
+    color: #7a7a7a;
+    font-size: calc(0.5rem + 1vw);
+}
+
+.divider_1 {
+    border-bottom: 2px solid $primary;
+    margin-top: -0.8em;
+    width: calc(2.1rem + 5vw);
+    margin-bottom: 0.5rem;
+}
+
+/* pages */
+.header-titles {
+    font-family: $titlesFont;
+    font-weight: 100;
+    color: white;
+    font-size: calc(1.7rem + 2vw);
+    width: min-content;
+    margin: 0;
+}
+
+.about-bg-img {
+    background-image: url(../img/cards-background.webp);
+    background-size: 205%;
+    background-color: #fffffff0;
+    background-blend-mode: lighten;
+}
+
+/* banner */
+.pages-background {
+    grid-area: banner;
+    background-image: url(../img/fondo-prueba1.png);
+    background-size: cover;
+    background-position: 76% 100%;
+    background-position: calc(73% - 12vw) 100%;
+    filter: drop-shadow(1px 3px 1px black);
+}
+
+.about-banner {
+    background: linear-gradient(90deg, #000000 23%, #000000d1 44%, #13002047 100%), linear-gradient(90deg, #000000 0%, #000000d1 2%, #13002047 100%);
+    
+}
+
+@media screen and (min-width: $ipadMiniLandscape) {
+    section {
+        h1 {
+            font-size: calc(1rem + 2.5vw);
+        }
+    } 
+    
+}
+
+@media screen and (min-width: $bootstrap-xl) {
+    .header-titles {
+        padding: unset;
+    }
+
+    .pages-background {
+        background-image: url(../img/fondo-prueba1.png);
+        background-size: cover;
+        background-position: right top;
+        filter: drop-shadow(1px 3px 1px black);
+        .hero-banner {
+            height: 55vh;
+        }
+    }   
+
+}
