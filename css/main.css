@@ -8051,7 +8051,8 @@ header {
   z-index: 999;
   transition: top 0.8s; }
   header .logo {
-    height: calc(1.8rem + 0.9vw); }
+    height: calc(1.22rem + 0.8vw);
+    padding: 0 1.25rem; }
   header nav {
     position: absolute;
     display: flex;
