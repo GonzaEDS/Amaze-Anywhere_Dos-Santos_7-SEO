@@ -1,8 +1,8 @@
 section {
-    h2, h3 {
+    h3 {
         color: $blackText;
     }
-    h1 {
+    h1, h2 {
         color: $blackText; 
         text-align: center;
         font-family: $titlesFont;
@@ -65,9 +65,65 @@ footer {
     
 }
 
+.error-page {
+    section {
+        height: calc(100vh - (1.7rem + 1vw));
+        padding-top: calc(10rem - 4vw);
+    }
+    p {
+        font-weight: 800;
+    }
+
+}
+
+@mixin grids {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@mixin gridFourthSections {
+    @include grids; 
+    grid-template-rows: 100vh repeat(3, auto);
+
+}
+@mixin gridThreeSections {
+    @include grids;
+    grid-template-rows: 100vh repeat(2, auto);
+}
+
+.grid {
+    @include gridFourthSections;
+    grid-template-areas: "hero" "welcome" "best-routines" "single-payment";
+}
+
+.about-grid {
+    @include gridFourthSections;
+    grid-template-areas:
+        "banner"
+        "quick-info"
+        "about"
+        "goals";
+}
+
+.faqs-grid {
+    @include gridThreeSections;
+    grid-template-areas: "banner" "faqs" "guarantee";
+}
+
+.testimonials-grid {
+    @include gridThreeSections;
+    grid-template-areas: "banner" "quote" "reviews";
+}
+
+.buy-grid {
+    @include gridThreeSections;
+    grid-template-areas: "banner" "summary" "buy-forms";
+}
+
+
 @media screen and (min-width: $ipadMiniLandscape) {
     section {
-        h1 {
+        h1, h2 {
             font-size: calc(1rem + 2.5vw);
         }
     } 
@@ -87,6 +143,15 @@ footer {
         .hero-banner {
             height: 55vh;
         }
-    }   
+    } 
+    
+    .about-grid {
+        grid-template-rows: 55vh repeat(3, auto);
+
+    } 
+
+    .faqs-grid, .testimonials-grid, .buy-grid {
+        grid-template-rows: 55vh repeat(2, auto);
+    }
 
 }

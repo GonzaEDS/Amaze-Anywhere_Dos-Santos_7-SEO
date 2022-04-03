@@ -7,7 +7,6 @@ header {
     transition: top 0.8s;
 
     .logo {
-        // height: calc(1.8rem + 0.9vw);
         height: calc(1.22rem + 0.8vw);
         padding: 0 1.25rem;
     }
@@ -48,6 +47,40 @@ header {
         font-weight: bold;
         min-width: fit-content;
         border: none;
+    }
+}
+
+
+.nav-toggle-label {   
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    color: $whiteText;
+    margin: -2px;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    span {
+        display: block;
+        background-color: $whiteText;
+        height: 2px;
+        width: 1.8em;
+        border-radius: 2px;
+        position: relative;
+
+        &:before {
+            @extend span;
+            content: '';
+            position: absolute;
+            top: 7px;
+        }
+
+        &:after {
+            @extend :before;
+            top: -7px;
+        }
     }
 }
 

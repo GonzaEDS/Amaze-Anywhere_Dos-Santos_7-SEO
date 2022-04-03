@@ -6,7 +6,6 @@
 }
 
 .about-start-btn {
-    // font-size: calc(0.6rem + 1.2vw);
     color: $whiteText;
     padding: 0.5rem;
     width: calc(5rem + 8.9vw);
@@ -59,7 +58,6 @@
             font-weight: 500;
         }
         p {
-            // font-size: calc(1.3rem + 0.215vw);
             line-height: 1.4;
             color: #d5e7ec;
             text-align: justify;
@@ -253,12 +251,12 @@
         }
     } 
     .course-goals {   
-        h1 {
+        h2 {
             font-size: map-get($map: $font-size-mediumGrowth, $key: '5');
             align-self: flex-start;
             margin-left: 3rem;
         }
-        .course-goals .divider_1 {
+        .divider_1 {
             align-self: flex-start;
             margin-left: 4rem;
         }

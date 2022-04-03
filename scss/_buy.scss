@@ -12,7 +12,7 @@
 }
 
 .summary-text {
-    h3 {
+    h2 {
         font-size: map-get($map: $font-size_slowGrowth, $key: '3');
         color: #2f2f2f;
     }

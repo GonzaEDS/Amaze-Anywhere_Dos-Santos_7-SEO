@@ -116,6 +116,33 @@
 body {
   font-family: "Lato", sans-serif; }
 
+@keyframes shining-btn {
+  0% {
+    background-image: linear-gradient(45deg, transparent 0%, #ffffff5e, transparent 15%); }
+  1% {
+    background-image: linear-gradient(45deg, transparent 8%, #ffffff5e, transparent 30%); }
+  2.25% {
+    background-image: linear-gradient(45deg, transparent 18%, #ffffff5e, transparent 45%); }
+  3.5% {
+    background-image: linear-gradient(45deg, transparent 27%, #ffffff5e, transparent 60%); }
+  4.75% {
+    background-image: linear-gradient(45deg, transparent 36%, #ffffff5e, transparent 75%); }
+  6% {
+    background-image: linear-gradient(45deg, transparent 45%, #ffffff5e, transparent 90%); }
+  7.25% {
+    background-image: linear-gradient(45deg, transparent 54%, #ffffff5e, transparent 105%); }
+  8.5% {
+    background-image: linear-gradient(45deg, transparent 63%, #ffffff5e, transparent 125%); }
+  9.75% {
+    background-image: linear-gradient(45deg, transparent 70%, #ffffff5e, transparent 140%); }
+  11% {
+    background-image: linear-gradient(45deg, transparent 80%, #ffffff5e, transparent 155%); }
+  12.25% {
+    background-image: linear-gradient(45deg, transparent 90%, #ffffff5e, transparent 170%);
+    color: #eeebeb; }
+  100% {
+    background-image: linear-gradient(45deg, transparent 90%, #ffffff5e, transparent 170%); } }
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -165,7 +192,7 @@ body {
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: "Lato", sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -7925,10 +7952,10 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important; } }
 
-section h2, section .h2, section h3, section .h3 {
+section h3, section .h3 {
   color: #262729; }
 
-section h1, section .h1 {
+section h1, section .h1, section h2, section .h2 {
   color: #262729;
   text-align: center;
   font-family: "Old Standard TT", serif;
@@ -7980,8 +8007,45 @@ footer {
 .about-banner {
   background: linear-gradient(90deg, #000000 23%, #000000d1 44%, #13002047 100%), linear-gradient(90deg, #000000 0%, #000000d1 2%, #13002047 100%); }
 
+.error-page section {
+  height: calc(100vh - (1.7rem + 1vw));
+  padding-top: calc(10rem - 4vw); }
+
+.error-page p {
+  font-weight: 800; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh repeat(3, auto);
+  grid-template-areas: "hero" "welcome" "best-routines" "single-payment"; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh repeat(3, auto);
+  grid-template-areas: "banner" "quick-info" "about" "goals"; }
+
+.faqs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh repeat(2, auto);
+  grid-template-areas: "banner" "faqs" "guarantee"; }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh repeat(2, auto);
+  grid-template-areas: "banner" "quote" "reviews"; }
+
+.buy-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh repeat(2, auto);
+  grid-template-areas: "banner" "summary" "buy-forms"; }
+
 @media screen and (min-width: 1024px) {
-  section h1, section .h1 {
+  section h1, section .h1, section h2, section .h2 {
     font-size: calc(1rem + 2.5vw); } }
 
 @media screen and (min-width: 1200px) {
@@ -7993,56 +8057,11 @@ footer {
     background-position: right top;
     filter: drop-shadow(1px 3px 1px black); }
     .pages-background .hero-banner {
-      height: 55vh; } }
-
-@keyframes shining-btn {
-  0% {
-    background-image: linear-gradient(45deg, transparent 0%, #ffffff5e, transparent 15%); }
-  1% {
-    background-image: linear-gradient(45deg, transparent 8%, #ffffff5e, transparent 30%); }
-  2.25% {
-    background-image: linear-gradient(45deg, transparent 18%, #ffffff5e, transparent 45%); }
-  3.5% {
-    background-image: linear-gradient(45deg, transparent 27%, #ffffff5e, transparent 60%); }
-  4.75% {
-    background-image: linear-gradient(45deg, transparent 36%, #ffffff5e, transparent 75%); }
-  6% {
-    background-image: linear-gradient(45deg, transparent 45%, #ffffff5e, transparent 90%); }
-  7.25% {
-    background-image: linear-gradient(45deg, transparent 54%, #ffffff5e, transparent 105%); }
-  8.5% {
-    background-image: linear-gradient(45deg, transparent 63%, #ffffff5e, transparent 125%); }
-  9.75% {
-    background-image: linear-gradient(45deg, transparent 70%, #ffffff5e, transparent 140%); }
-  11% {
-    background-image: linear-gradient(45deg, transparent 80%, #ffffff5e, transparent 155%); }
-  12.25% {
-    background-image: linear-gradient(45deg, transparent 90%, #ffffff5e, transparent 170%);
-    color: #eeebeb; }
-  100% {
-    background-image: linear-gradient(45deg, transparent 90%, #ffffff5e, transparent 170%); } }
-
-.nav-toggle-label {
-  position: absolute;
-  top: 50%;
-  right: 5%;
-  color: #eeebeb;
-  margin: -2px; }
-  .nav-toggle-label:focus {
-    box-shadow: none; }
-  .nav-toggle-label span, .nav-toggle-label span:before, .nav-toggle-label span:after {
-    display: block;
-    background-color: #eeebeb;
-    height: 2px;
-    width: 1.8em;
-    border-radius: 2px;
-    position: relative; }
-    .nav-toggle-label span:before, .nav-toggle-label span:after {
-      content: '';
-      position: absolute;
-      top: 7px; }
-    .nav-toggle-label span:after {
-      top: -7px; }
+      height: 55vh; }
+  .about-grid {
+    grid-template-rows: 55vh repeat(3, auto); }
+  .faqs-grid, .testimonials-grid, .buy-grid {
+    grid-template-rows: 55vh repeat(2, auto); } }
 
 header {
   background-color: #060606f7;
@@ -8082,6 +8101,28 @@ header {
     font-weight: bold;
     min-width: fit-content;
     border: none; }
+
+.nav-toggle-label {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  color: #eeebeb;
+  margin: -2px; }
+  .nav-toggle-label:focus {
+    box-shadow: none; }
+  .nav-toggle-label span, .nav-toggle-label span:before, .nav-toggle-label span:after {
+    display: block;
+    background-color: #eeebeb;
+    height: 2px;
+    width: 1.8em;
+    border-radius: 2px;
+    position: relative; }
+    .nav-toggle-label span:before, .nav-toggle-label span:after {
+      content: '';
+      position: absolute;
+      top: 7px; }
+    .nav-toggle-label span:after {
+      top: -7px; }
 
 @media screen and (min-width: 390px) {
   nav button {
@@ -8139,42 +8180,6 @@ header {
 @media screen and (min-width: 992px) {
   header {
     padding: 0 3rem 0 2rem; } }
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(3, auto);
-  grid-template-areas: "hero" "welcome" "best-routines" "single-payment"; }
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(3, auto);
-  grid-template-areas: "banner" "quick-info" "about" "goals"; }
-
-.faqs-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(2, auto);
-  grid-template-areas: "banner" "faqs" "guarantee"; }
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(2, auto);
-  grid-template-areas: "banner" "quote" "reviews"; }
-
-.buy-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(2, auto);
-  grid-template-areas: "banner" "summary" "buy-forms"; }
-
-@media screen and (min-width: 1200px) {
-  .about-grid {
-    grid-template-rows: 55vh repeat(3, auto); }
-  .faqs-grid, .testimonials-grid, .buy-grid {
-    grid-template-rows: 55vh repeat(2, auto); } }
 
 .hero-banner {
   background: linear-gradient(90deg, black 0%, rgba(0, 0, 0, 0.953286) 24%, rgba(0, 212, 255, 0) 100%);
@@ -8293,7 +8298,7 @@ header {
 
 .sp-card {
   background-color: #4d4d4d; }
-  .sp-card h1, .sp-card .h1 {
+  .sp-card h2, .sp-card .h2 {
     color: #eeebeb; }
   .sp-card .sp-card-body {
     background-color: #eeebeb;
@@ -8335,7 +8340,7 @@ header {
     width: 90%; }
   .rule {
     border-bottom: 2px solid #287c81fa; }
-  .best-routines-section h1, .best-routines-section .h1 {
+  .best-routines-section h2, .best-routines-section .h2 {
     line-height: 1.3; } }
 
 .about-grid .about-banner {
@@ -8515,11 +8520,11 @@ header {
       width: 40%; }
   .about-grid .hero-banner {
     padding-left: 0; }
-  .course-goals h1, .course-goals .h1 {
+  .course-goals h2, .course-goals .h2 {
     font-size: calc(1rem + 2.4vw);
     align-self: flex-start;
     margin-left: 3rem; }
-  .course-goals .course-goals .divider_1 {
+  .course-goals .divider_1 {
     align-self: flex-start;
     margin-left: 4rem; } }
 
@@ -8641,7 +8646,7 @@ input:checked + li label .fa-li {
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     margin: 0; }
-  .quote h1, .quote .h1 {
+  .quote h2, .quote .h2 {
     all: unset;
     font-weight: 700;
     line-height: 1.3; }
@@ -8668,7 +8673,7 @@ input:checked + li label .fa-li {
   gap: 2em;
   background: linear-gradient(45deg, #31758f, #23434fc7);
   padding: 2em 0; }
-  .reviews h1, .reviews .h1 {
+  .reviews h2, .reviews .h2 {
     color: #fffffffa;
     font-style: italic; }
 
@@ -8726,7 +8731,7 @@ input:checked + li label .fa-li {
   background-color: #fffffffd;
   filter: drop-shadow(0px 1px 1px black); }
 
-.summary-text h3, .summary-text .h3 {
+.summary-text h2, .summary-text .h2 {
   font-size: calc(1rem + 1.3vw);
   color: #2f2f2f; }
 
