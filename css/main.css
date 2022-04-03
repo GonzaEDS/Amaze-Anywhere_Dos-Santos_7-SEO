@@ -8017,31 +8017,31 @@ footer {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(3, auto);
+  grid-template-rows: 100vh repeat(4, auto);
   grid-template-areas: "hero" "welcome" "best-routines" "single-payment"; }
 
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(3, auto);
+  grid-template-rows: 100vh repeat(4, auto);
   grid-template-areas: "banner" "quick-info" "about" "goals"; }
 
 .faqs-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(2, auto);
+  grid-template-rows: 100vh repeat(3, auto);
   grid-template-areas: "banner" "faqs" "guarantee"; }
 
 .testimonials-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(2, auto);
+  grid-template-rows: 100vh repeat(3, auto);
   grid-template-areas: "banner" "quote" "reviews"; }
 
 .buy-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(2, auto);
+  grid-template-rows: 100vh repeat(3, auto);
   grid-template-areas: "banner" "summary" "buy-forms"; }
 
 @media screen and (min-width: 1024px) {
@@ -8554,7 +8554,8 @@ header {
     text-transform: uppercase;
     font-style: italic;
     font-weight: 500;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: initial; }
   .faqs p {
     color: #ffffffe6;
     line-height: 1.5;

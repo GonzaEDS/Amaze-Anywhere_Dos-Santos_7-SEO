@@ -76,28 +76,13 @@ footer {
 
 }
 
-@mixin grids {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-@mixin gridFourthSections {
-    @include grids; 
-    grid-template-rows: 100vh repeat(3, auto);
-
-}
-@mixin gridThreeSections {
-    @include grids;
-    grid-template-rows: 100vh repeat(2, auto);
-}
-
 .grid {
-    @include gridFourthSections;
+    @include gridSections (4);
     grid-template-areas: "hero" "welcome" "best-routines" "single-payment";
 }
 
 .about-grid {
-    @include gridFourthSections;
+    @include gridSections (4);
     grid-template-areas:
         "banner"
         "quick-info"
@@ -106,17 +91,17 @@ footer {
 }
 
 .faqs-grid {
-    @include gridThreeSections;
+    @include gridSections (3);
     grid-template-areas: "banner" "faqs" "guarantee";
 }
 
 .testimonials-grid {
-    @include gridThreeSections;
+    @include gridSections (3);
     grid-template-areas: "banner" "quote" "reviews";
 }
 
 .buy-grid {
-    @include gridThreeSections;
+    @include gridSections (3);
     grid-template-areas: "banner" "summary" "buy-forms";
 }
 

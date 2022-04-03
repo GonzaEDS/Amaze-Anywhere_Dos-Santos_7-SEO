@@ -121,6 +121,16 @@ body {
     align-items: $align;
 }
 
+@mixin grids {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@mixin gridSections ($sections) {
+    @include grids;
+    grid-template-rows: 100vh repeat($sections, auto)
+}
+
 //animations
 
 @keyframes shining-btn {

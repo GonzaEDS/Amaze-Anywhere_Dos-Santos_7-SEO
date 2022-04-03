@@ -347,9 +347,39 @@ summary {
   display: list-item;
   cursor: pointer; }
 
+[hidden] {
+  display: none !important; }
+
 .img-fluid {
   max-width: 100%;
   height: auto; }
+
+.container {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; } }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; } }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; } }
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; } }
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px; } }
 
 .row {
   --bs-gutter-x: 1.5rem;
@@ -636,6 +666,21 @@ summary {
 .collapse:not(.show) {
   display: none; }
 
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease; }
+  @media (prefers-reduced-motion: reduce) {
+    .collapsing {
+      transition: none; } }
+  .collapsing.collapse-horizontal {
+    width: 0;
+    height: auto;
+    transition: width 0.35s ease; }
+    @media (prefers-reduced-motion: reduce) {
+      .collapsing.collapse-horizontal {
+        transition: none; } }
+
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -651,6 +696,11 @@ summary {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
+  .navbar > .container {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between; }
 
 .navbar-collapse {
   flex-basis: 100%;
@@ -1101,31 +1151,31 @@ footer {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(3, auto);
+  grid-template-rows: 100vh repeat(4, auto);
   grid-template-areas: "hero" "welcome" "best-routines" "single-payment"; }
 
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(3, auto);
+  grid-template-rows: 100vh repeat(4, auto);
   grid-template-areas: "banner" "quick-info" "about" "goals"; }
 
 .faqs-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(2, auto);
+  grid-template-rows: 100vh repeat(3, auto);
   grid-template-areas: "banner" "faqs" "guarantee"; }
 
 .testimonials-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(2, auto);
+  grid-template-rows: 100vh repeat(3, auto);
   grid-template-areas: "banner" "quote" "reviews"; }
 
 .buy-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 100vh repeat(2, auto);
+  grid-template-rows: 100vh repeat(3, auto);
   grid-template-areas: "banner" "summary" "buy-forms"; }
 
 @media screen and (min-width: 1024px) {
@@ -1638,7 +1688,8 @@ header {
     text-transform: uppercase;
     font-style: italic;
     font-weight: 500;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    text-align: initial; }
   .faqs p {
     color: #ffffffe6;
     line-height: 1.5;
