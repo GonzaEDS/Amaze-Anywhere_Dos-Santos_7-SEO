@@ -53,7 +53,7 @@ footer {
 /* banner */
 .pages-background {
     grid-area: banner;
-    background-image: url(../img/fondo-prueba1.png);
+    background-image: url(../img/pages-banner.png);
     background-size: cover;
     background-position: 76% 100%;
     background-position: calc(73% - 12vw) 100%;
@@ -121,7 +121,7 @@ footer {
     }
 
     .pages-background {
-        background-image: url(../img/fondo-prueba1.png);
+        background-image: url(../img/pages-banner.png);
         background-size: cover;
         background-position: right top;
         filter: drop-shadow(1px 3px 1px black);
