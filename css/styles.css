@@ -1022,6 +1022,8 @@ summary {
     justify-content: space-evenly !important; }
   .align-items-md-start {
     align-items: flex-start !important; }
+  .align-items-md-center {
+    align-items: center !important; }
   .align-self-md-start {
     align-self: flex-start !important; }
   .m-md-auto {
