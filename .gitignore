@@ -1,5 +1,5 @@
 .vscode/
-node_modules/
+node_modules/**
 !node_modules/bootstrap/dist/js/bootstrap.min.js
 *.ai
 *.temp
